@@ -6,9 +6,8 @@ class ArticleEnhancer {
 }
 
 articles.forEach((article) => {
-  new ArticleEnhancer(article);
+  console.log(article);
 })
-
 
 // EXERCISE 2
 const articleData = [
