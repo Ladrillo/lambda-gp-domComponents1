@@ -43,11 +43,6 @@ const articleData = [
   },
 ];
 
-
-// articles.forEach(article => {
-//   new ArticleEnhancer(article);
-// });
-
 class ArticleGenerator {
   constructor(domNode, data) {
     this.article = domNode;
