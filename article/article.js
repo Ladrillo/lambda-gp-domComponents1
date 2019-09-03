@@ -17,15 +17,15 @@ const articlesFromApi = [
 ];
 
 // 1
-// Build an articleMaker function that takes an object with title, text1 and text2 properties.
-// This function should return an article element with an h3 heading, and two paragraphs.
+// Build an articleMaker function that takes an object with title, text1 and text2 props.
+// This function should return an article element containing an h3 and two paragraphs.
 // The heading should display the title, and the two paragraphs should display text1 and text2 resp.
 
 // 2
-// Using the articleMaker, generate articles using the articlesFromApi array of article data.
+// Using the articleMaker, generate article elements using the articlesFromApi array of article data.
 
 // 3
-// loop over the generated articles and attach them to the DOM.
+// loop over the generated article elements and attach them to the DOM.
 
 // 4
 // Improve the articleMaker so each article has a 'toggle' button to display or not the paragraphs.
