@@ -52,6 +52,7 @@ function articleMaker({ title, text1, text2 }) {
   const h3 = document.createElement('h3');
   const p1 = document.createElement('p');
   const p2 = document.createElement('p');
+  const button = document.createElement('button');
 
   // const [article, h3, p1, p2] = ['article', 'h3', 'p', 'p']
   //   .map(element => document.createElement(element));
@@ -59,10 +60,20 @@ function articleMaker({ title, text1, text2 }) {
   h3.textContent = title;
   p1.textContent = text1;
   p2.textContent = text2;
+  button.textContent = 'toggle';
+
+  p1.classList.add('hidden');
+  p2.classList.add('hidden');
+
+  button.addEventListener('click', e => {
+    p1.classList.toggle('hidden');
+    p2.classList.toggle('hidden');
+  });
 
   article.appendChild(h3);
   article.appendChild(p1);
   article.appendChild(p2);
+  article.appendChild(button);
 
   return article;
 }
