@@ -48,10 +48,7 @@ const uglyButton = buttonMaker({
 // The heading should display the title, and the two paragraphs should display text1 and text2 respectively.
 
 function articleMaker({ title, text1, text2 }) {
-
-
   debugger
-
 
   const article = document.createElement('article');
   const h3 = document.createElement('h3');
