@@ -37,8 +37,8 @@ const uglyButton = buttonMaker({
   label: "I am ugly",
   callback: () => console.log("ay!")
 });
-prettyButton && document.body.insertAdjacentElement('afterbegin', prettyButton);
-uglyButton && document.body.insertAdjacentElement('afterbegin', uglyButton);
+// prettyButton && document.body.insertAdjacentElement('afterbegin', prettyButton);
+// uglyButton && document.body.insertAdjacentElement('afterbegin', uglyButton);
 
 
 
