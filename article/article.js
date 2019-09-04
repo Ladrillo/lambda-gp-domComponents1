@@ -10,10 +10,16 @@
 
 function buttonMaker(settings) {
   let button = document.createElement('button');
+
   button.textContent = settings.label;
-  button.style.color = settings.styles && settings.styles.color ? settings.styles.color : 'red';
-  button.style.borderRadius = settings.styles && settings.styles.borderRadius ? settings.styles.borderRadius : '5px';
+
+  button.style.color = settings.styles &&
+    settings.styles.color ? settings.styles.color : 'red';
+  button.style.borderRadius = settings.styles &&
+    settings.styles.borderRadius ? settings.styles.borderRadius : '5px';
+
   button.addEventListener('click', settings.callback);
+
   return button;
 }
 // NO need to code down here. This is testing your buttonMaker:
