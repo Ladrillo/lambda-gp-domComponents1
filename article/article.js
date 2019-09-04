@@ -48,6 +48,11 @@ const uglyButton = buttonMaker({
 // The heading should display the title, and the two paragraphs should display text1 and text2 respectively.
 
 function articleMaker({ title, text1, text2 }) {
+
+
+  debugger
+
+
   const article = document.createElement('article');
   const h3 = document.createElement('h3');
   const p1 = document.createElement('p');
@@ -66,6 +71,12 @@ function articleMaker({ title, text1, text2 }) {
 
   return article;
 }
+
+const testArticle = articleMaker({
+  title: 'Sheep',
+  text1: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+  text2: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+});
 
 // 3
 // Using the articleMaker, generate article elements using the articlesFromApi array of article data.
