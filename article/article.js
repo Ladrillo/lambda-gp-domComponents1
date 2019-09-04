@@ -86,13 +86,23 @@ const articlesFromApi = [
     text1: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     text2: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
   },
+  {
+    title: 'Worms',
+    text1: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    text2: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+  },
 ];
 const articles = articlesFromApi.map(articleMaker);
 
 // 4
 // loop over the generated article elements and attach them to the DOM.
 
+const articlesContainer = document.querySelector('.articles');
 
+articles.forEach((element, index) => {
+  articlesContainer.appendChild(element);
+  if(index === 1) element.classList.add('special')
+});
 
 // 5
 // Improve the articleMaker so each article has a 'toggle' button to display or not the paragraphs.
