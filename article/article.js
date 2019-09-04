@@ -101,7 +101,9 @@ const articlesContainer = document.querySelector('.articles');
 
 articles.forEach((element, index) => {
   articlesContainer.appendChild(element);
-  if(index === 1) element.classList.add('special')
+  if (index === 1) {
+    element.classList.add('special')
+  }
 });
 
 // 5
