@@ -1,21 +1,21 @@
 // 1
-// Implement a function called buttonMaker. This function will take an object as its only argument.
-// Arguments passed to buttonMaker will look like this: { label: "click me", action: () => console.log("you clicked!") }
+// Implement a function called buttonMaker. This function expects an object as its only argument.
+// The argument passed to buttonMaker will look like this: { label: "click me", callback: () => console.log("you clicked!") }
 // The buttonMaker, when invoked, should RETURN an HTML button element.
 // The returned button should have text matching the label property of the argument.
 // The returned button should be red and have a border radius of 5px.
-// The returned button, when clicked, should perform the action passed in the action property of the argument.
+// The returned button, when clicked, should invoke the callback passed in the callback property of the argument.
 
 function buttonMaker(/* code here */) {
   // and code here
 }
 const prettyButton = buttonMaker({
   label: "I am pretty",
-  action: () => console.log("ouch!")
+  callback: () => console.log("ouch!")
 });
 const uglyButton = buttonMaker({
   label: "I am ugly",
-  action: () => console.log("ay!")
+  callback: () => console.log("ay!")
 });
 prettyButton && document.body.insertAdjacentElement('afterbegin', prettyButton);
 uglyButton && document.body.insertAdjacentElement('afterbegin', uglyButton);
@@ -31,6 +31,8 @@ uglyButton && document.body.insertAdjacentElement('afterbegin', uglyButton);
 
 // 3
 // Using the articleMaker, generate article elements using the articlesFromApi array of article data.
+// Hint: you can loop over articlesFromApi, generating articles as you go, or you can use .map.
+
 const articlesFromApi = [
   {
     title: 'Sheep',
