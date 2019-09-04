@@ -47,7 +47,25 @@ const uglyButton = buttonMaker({
 // This function should RETURN an article HTML element containing an h3 and two paragraphs.
 // The heading should display the title, and the two paragraphs should display text1 and text2 respectively.
 
+function articleMaker({ title, text1, text2 }) {
+  const article = document.createElement('article');
+  const h3 = document.createElement('h3');
+  const p1 = document.createElement('p');
+  const p2 = document.createElement('p');
 
+  // const [article, h3, p1, p2] = ['article', 'h3', 'p', 'p']
+  //   .map(element => document.createElement(element));
+
+  h3.textContent = title;
+  p1.textContent = text1;
+  p2.textContent = text2;
+
+  article.appendChild(h3);
+  article.appendChild(p1);
+  article.appendChild(p2);
+
+  return article;
+}
 
 // 3
 // Using the articleMaker, generate article elements using the articlesFromApi array of article data.
