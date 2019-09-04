@@ -9,16 +9,18 @@
 // - The returned button, when clicked, should invoke the callback passed in the `callback` prop of the argument.
 
 function buttonMaker(settings) {
+  const { label, callback, styles } = settings;
   let button = document.createElement('button');
 
-  button.textContent = settings.label;
+  button.textContent = label;
 
-  button.style.color = settings.styles &&
-    settings.styles.color ? settings.styles.color : 'red';
-  button.style.borderRadius = settings.styles &&
-    settings.styles.borderRadius ? settings.styles.borderRadius : '5px';
+  const color = styles ? styles.color : 'red';
+  const borderRadius = styles ? styles.borderRadius : '5px';
 
-  button.addEventListener('click', settings.callback);
+  button.style.color = color;
+  button.style.borderRadius = borderRadius;
+
+  button.addEventListener('click', callback);
 
   return button;
 }
