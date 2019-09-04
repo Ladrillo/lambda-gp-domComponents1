@@ -8,14 +8,22 @@
 // - The returned button should be red and have a border radius of 5px. (STRETCH)
 // - The returned button, when clicked, should invoke the callback passed in the `callback` prop of the argument.
 
-function buttonMaker(/* code HERE */) {
-  // and code HERE
+function buttonMaker(settings) {
+  let button = document.createElement('button');
+  button.textContent = settings.label;
+  button.style.color = settings.styles && settings.styles.color ? settings.styles.color : 'red';
+  button.style.borderRadius = settings.styles && settings.styles.borderRadius ? settings.styles.borderRadius : '5px';
+  button.addEventListener('click', settings.callback);
+  return button;
 }
-
 // NO need to code down here. This is testing your buttonMaker:
 const prettyButton = buttonMaker({
   label: "I am pretty",
-  callback: () => console.log("ouch!")
+  callback: () => console.log("ouch!"),
+  styles: {
+    color: 'green',
+    borderRadius: '10px'
+  },
 });
 const uglyButton = buttonMaker({
   label: "I am ugly",
