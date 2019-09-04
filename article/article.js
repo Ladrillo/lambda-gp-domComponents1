@@ -1,10 +1,12 @@
 // 1
-// Implement a function called buttonMaker. This function expects an object as its only argument.
-// The argument passed to buttonMaker will look like this: { label: "click me", callback: () => console.log("you clicked!") }
-// The buttonMaker, when invoked, should RETURN an HTML button element.
-// The returned button should have text matching the label property of the argument.
-// The returned button should be red and have a border radius of 5px.
-// The returned button, when clicked, should invoke the callback passed in the callback property of the argument.
+// IMPLEMENT A FUNCTION called buttonMaker.
+// - It expects an object as its only argument.
+// - The argument passed to buttonMaker will look similar to:
+//      { label: "click me", callback: () => console.log("you clicked!") }
+// - The buttonMaker, when invoked, should RETURN an HTML button element.
+// - The returned button should have text matching the `label` property of the argument.
+// - The returned button should be red and have a border radius of 5px.
+// - The returned button, when clicked, should invoke the callback passed in the `callback` prop of the argument.
 
 function buttonMaker(/* code here */) {
   // and code here
