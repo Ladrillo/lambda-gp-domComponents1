@@ -66,16 +66,10 @@ function articleMaker({ title, text1, text2 }) {
 
   return article;
 }
-articleMaker({
-  title: 'Sheep',
-  text1: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-  text2: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-})
 
 // 3
 // Using the articleMaker, generate article elements using the articlesFromApi array of article data.
 // Hint: you can loop over articlesFromApi, generating articles as you go, or you can use .map.
-
 const articlesFromApi = [
   {
     title: 'Sheep',
@@ -93,8 +87,7 @@ const articlesFromApi = [
     text2: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
   },
 ];
-
-
+const articles = articlesFromApi.map(articleMaker);
 
 // 4
 // loop over the generated article elements and attach them to the DOM.
