@@ -8,9 +8,11 @@
 // - The returned button should be red and have a border radius of 5px.
 // - The returned button, when clicked, should invoke the callback passed in the `callback` prop of the argument.
 
-function buttonMaker(/* code here */) {
-  // and code here
+function buttonMaker(/* code HERE */) {
+  // and code HERE
 }
+
+// NO need to code down here. This is testing your buttonMaker:
 const prettyButton = buttonMaker({
   label: "I am pretty",
   callback: () => console.log("ouch!")
